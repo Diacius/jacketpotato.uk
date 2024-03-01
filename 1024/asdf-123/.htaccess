@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Authenticate"
+AuthUserFile /customers/4/5/7/ginger-ninja.uk/httpd.www/asdf-123/.htpasswd
+Require valid-user
