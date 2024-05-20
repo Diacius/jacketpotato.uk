@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
+    <link id="csslinker" rel="stylesheet" href="style.css">
     <title>JacketPotato's Website</title>
     <style></style>
 </head>
 <body>
     <main>
-        <div style="">
+        <div>
             <noscript>Just to let you know, you have javascript disabled. That doesn't affect this website but it may affect other websites :)</noscript>
             <h1 id="title">I'm JacketPotato!</h1>
             <p>I'm a human who writes code and plays games. I sometimes do graphic design.</p>
@@ -24,7 +24,12 @@
                 <p><a href="posts/extractmusicfromwiigames.html">How to extract the music from Wii games</a></p>
             </div>   
         </div>
-        
+        <script src="js/designify.js"></script>
+        <script>
+            window.onload = (event) => {
+                designifyCheck();
+            };
+        </script>
     </main>
 </body>
 </html>
