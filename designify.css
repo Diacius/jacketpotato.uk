@@ -1,7 +1,7 @@
 /*
 GRAPHIC DESIGN IS MY PASSION BAYBES*/
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Papyrus", "Impact", "Webdings";
+    font-family: "Chalkduster", "Papyrus", "Impact", "Ravie" ,"Comic Sans MS","Webdings";
     font-weight: 700;
   }
   .h1 {
@@ -32,7 +32,7 @@ GRAPHIC DESIGN IS MY PASSION BAYBES*/
     margin: 1rem 0;
   }
   body {
-    font-family: "Comic Sans MS", "Impact", "Papyrus";
+    font-family: "Comic Sans MS", "Zapfino", "Impact", "Papyrus";
     background: #ff0000;
     font-size: 1rem;
     margin: 0;
