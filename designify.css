@@ -9,6 +9,7 @@ GRAPHIC DESIGN IS MY PASSION BAYBES*/
   }
   
   .h2 {
+    color: #f0f000;
     font-size: 1.5em;
   }
   
@@ -52,7 +53,7 @@ GRAPHIC DESIGN IS MY PASSION BAYBES*/
     justify-content: center;
   }
   #title {
-      color: #f546a6;
+      color: #00fffff;
       font-size: 5rem;
       margin: 0.25em 0;
       text-align: center;
@@ -60,7 +61,7 @@ GRAPHIC DESIGN IS MY PASSION BAYBES*/
   a, a:visited, a:hover {
     font-weight: 600;
     text-decoration-height: 10px;
-    color: #0000EE;
+    color: #00ffEE;
   }
   .promo {
     font-size: 0.75rem;
