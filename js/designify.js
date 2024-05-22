@@ -3,6 +3,6 @@ const urlParams = new URLSearchParams(queryString);
 
 function designifyCheck() {
     if (urlParams.get('designify')) {
-        document.querySelector('#csslinker').innerHTML = '<link id="csslinker" rel="stylesheet" href="/designify.css">';
+        document.querySelector('#csslinker').outerHTML = '<link id="csslinker" rel="stylesheet" href="/designify.css">';
     }
 }
