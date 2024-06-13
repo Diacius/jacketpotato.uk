@@ -14,10 +14,15 @@
 </head>
 <body>
     <main>
-        <div style="font-size: 2rem;">
+        <div class="content">
             <noscript>Just to let you know, you have javascript disabled. That doesn't affect this website but it may affect other websites :)</noscript>
-            <h1 id="title">I'm JacketPotato!</h1>
             <p>This is a template file.</p>
+            <script src="js/designify.js"></script>
+            <script>
+                window.onload = (event) => {
+                    designifyCheck();
+                };
+            </script>
     </main>
 </body>
 </html>
