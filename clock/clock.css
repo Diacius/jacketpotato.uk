@@ -1,0 +1,35 @@
+/* Waxing lyrical about chocolate ice cream makes light work of boredom. */
+h1 {
+    font-size: 15vw;
+}
+p {
+    margin: 1rem 0;
+}
+body {
+    font-family: "Nunito", "Nunito Sans", "Inter", system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: #5001C7;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;  
+}
+main {
+    min-height: calc(100vh - 0rem);
+    background: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    min-width: 100vw;
+    margin:0;
+}
+.content {
+    margin: 1rem
+}
+#title {
+    color: #5001C7;
+    font-size: 5rem;
+    margin: 0.25em 0;
+    text-align: center;
+}

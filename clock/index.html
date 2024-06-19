@@ -1,3 +1,4 @@
+<!--How much wood would the woodchuck chuck if the woodchuck could chuck wood?-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/style.css">
-    <title>JacketPotato's Website</title>
+    <link rel="stylesheet" href="clock.css">
+    <title>JacketPotato's Clock</title>
     <style></style>
 </head>
 <body>
     <main>
         <div class="content">
             <noscript>Just to let you know, you have javascript disabled. That doesn't affect this website but it may affect other websites :)</noscript>
-            <p>This is a template file.</p>
+            <h1><span id="hours">16</span>:<span id="minutes">20</span>:<span id="seconds">69</span></h1>
+            <a href="javascript:invert()" style="color: inherit; font-weight: 900;">Invert Colours</a>
+            <a href="/" style="color: #00f; font-weight: 900;">Back</a> <br>The clock syncs to your system time, and may not be accurate.
             <script src="/js/designify.js"></script>
+            <script src="clock.js"></script>
             <script>
                 window.onload = (event) => {
                     designifyCheck();
+                    continuouslyUpdate();
                 };
             </script>
     </main>
