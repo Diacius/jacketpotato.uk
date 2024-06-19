@@ -1,0 +1,28 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_106_22)">
+<g filter="url(#filter0_b_106_22)">
+<rect width="500" height="500" fill="#946EFF"/>
+</g>
+<rect x="-18" y="188" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="125" y="213" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-30" y="284" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="232" y="313" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="298" y="159" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="48" y="348" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="30" y="21" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-60" y="-16" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="280" y="-16" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="95" y="-16" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_b_106_22" x="-50" y="-50" width="600" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_106_22"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_106_22" result="shape"/>
+</filter>
+<clipPath id="clip0_106_22">
+<rect width="500" height="500" fill="white"/>
+</clipPath>
+</defs>
+</svg>

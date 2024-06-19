@@ -1,0 +1,31 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_106_6)">
+<g filter="url(#filter0_b_106_6)">
+<rect width="500" height="500" fill="#946EFF"/>
+</g>
+<rect x="-17" y="-26" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-42" y="139" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="145" y="122" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="118" y="-58" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="250" y="-37" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="278" y="124" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="371" y="237" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="245" y="263" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="85" y="284" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-59" y="333" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="143" y="241" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-40" y="-26" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+<rect x="-109" y="169" width="250" height="250" rx="125" fill="#440484" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_b_106_6" x="-50" y="-50" width="600" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_106_6"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_106_6" result="shape"/>
+</filter>
+<clipPath id="clip0_106_6">
+<rect width="500" height="500" rx="100" fill="white"/>
+</clipPath>
+</defs>
+</svg>
