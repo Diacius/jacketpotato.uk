@@ -16,13 +16,29 @@
     <main>
         <div class="content">
             <noscript>Just to let you know, you have javascript disabled. That doesn't affect this website but it may affect other websites :)</noscript>
-            <p>This is a template file.</p>
+            <form id="ticket-calculator-form" submit="">
+                <div>
+                    <p><label for="ticketsNeeded">How many tickets do you need?</label>
+                    <input type="number" id="ticketsNeeded" name="ticketsNeeded" value="0"></p>
+                    <p><label for="tickets">How many tickets do you have?</label>
+                    <input type="number" name="tickets" id="tickets"></p>
+                </div>
+                <div>
+                    <p><label for="daysCannotWork">How many days are you unable to work?</label>
+                    <input type="number" name="daysCannotWork" id="daysCannotWork" value="0"></p>
+                    <p><label for="percentageCanWork">OR, As a decimal, what fraction of time can you work</label>
+                    <input type="number" name="percentageCanWork" id="percentageCanWork" value="0">
+                    </p>
+                </div>
+                <div>
+                    Therefore, you need to work: <span id="output"></span> hours/day
+                </div>
+                <input type="submit" value="Submit" />
+                <p>Known issues:
+                <ul><li>Using both days and a decimal breaks things</li></ul>
+                </p>
+            </form>
             <script src="ticketcalc.js"></script>
-            <script>
-                window.onload = (event) => {
-                    
-                };
-            </script>
     </main>
 </body>
 </html>

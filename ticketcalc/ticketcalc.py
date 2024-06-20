@@ -3,6 +3,7 @@ today = datetime.date.today()
 endday = datetime.date(2024, 8 ,31)
 currenttickets = int(input("How many tickets do you have currently?"))
 daysleft = endday - today
+print(daysleft)
 cost = int(input("What is the total cost of the prizes you want"))
 choice = input("Do you want to express how many days you can work as how many you are missing or what percentage? provide any input for a percentage")
 if choice != '':
