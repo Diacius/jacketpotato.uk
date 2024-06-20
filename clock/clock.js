@@ -1,5 +1,5 @@
 let months = ['January', 'February', 'March', 'April', 'June','July', 'August']
-let days = ['Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday' , 'Saturday', 'Sunday']
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' , 'Saturday', 'Sunday']
 async function update() {
     let d = new Date();
     let hour = d.getHours();
