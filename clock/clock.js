@@ -14,32 +14,29 @@ async function update() {
     if (second < 10) {
         second = '0' + second
     }
-    let hourElement = document.querySelector('#hours');
-    let minuteElement = document.querySelector('#minutes');
-    let secondsElement = document.querySelector('#seconds');
-    hourElement.innerHTML = hour;
-    minuteElement.innerHTML = minute;
-    secondsElement.innerHTML = second;
+    let timeElement = document.querySelector('#time');
+    timeElement.innerHTML = hour+':'+minute+':'+second
 
 }
 async function dateUpdate() {
     let d = new Date();
     let data = d.getDate();
     if (data.toString().slice(-1) == '1') {
-        document.querySelector('#date').innerHTML = data + "st"
+        let dateString = data + "st"
     }
     if (data.toString().slice(-1) == '2') {
-        document.querySelector('#date').innerHTML = data + "nd"
+        let dateString = data + "nd"
     }
     if (data.toString().slice(-1) == '3') {
-        document.querySelector('#date').innerHTML = data + "rd"
+        let dateString = data + "rd"
     }
     if (data.toString().slice(-1) != '1' & data.toString().slice(-1) != '2' & data.toString().slice(-1) != '3') {
-        document.querySelector('#date').innerHTML = data + "th"
+        let dateString = data + "th"
     }
-    document.querySelector('#month').innerHTML = months[d.getMonth()]
-    document.querySelector('#year').innerHTML = d.getFullYear();
-    document.querySelector('#dayOfWeek').innerHTML = days[d.getDay() -1];
+    else {
+        let dateString = "0"
+    }
+    document.querySelector('#date').innerHTML = "It's " + days[d.getDay() -1] + " the " + d.getDate()+"th" + " of " + months[d.getMonth()] + " " + d.getFullYear()
 }
 async function delay(ms) {
     // return await for better async stack trace support in case of errors.
