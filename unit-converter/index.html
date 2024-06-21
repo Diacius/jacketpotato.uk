@@ -69,6 +69,32 @@
                 </div>
                 <div><button onclick="updateTemperature()">Calculate Temperature</button></div>
             </div>
+            <div id="data-converter">
+                <h2>Data Converter</h2>
+                <div>
+                    <label for="data_in">Amount of data</label>
+                    <input type="number" name="data_in" id="data_in" step="0.1">
+                    <label for="data_in_unit">Unit</label>
+                    <select name="data_in_unit" id="data_in_unit">
+                        <option value="bit">Bit</option>
+                        <option value="byte">Byte</option>
+                        <option value="kilobit">Kilobit</option>
+                        <option value="kilobyte">Kilobyte</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="data_out">Output</label>
+                    <input type="number" name="data_out" id="data_out" step="0.1">
+                    <label for="data_out_unit">Unit</label>
+                    <select name="data_out_unit" id="data_out_unit">
+                        <option value="bit">Bit</option>
+                        <option value="byte">Byte</option>
+                        <option value="kilobit">Kilobit</option>
+                        <option value="kilobyte">Kilobyte</option>
+                    </select>
+                </div>
+                <div><button onclick="updateData()">Calculate Data</button></div>
+            </div>
             <a href="/">Go home</a>
             <script src="ticketcalc.js"></script>
     </main>

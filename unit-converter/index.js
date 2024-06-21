@@ -55,3 +55,24 @@ function updateTemperature() {
         output.value = celciusValue * (9/5) + 491.67
     }
 }
+// Conversion into bytes!
+data_in_units = {
+    "bit": 0.125,
+    "byte": 1,
+    "kilobit": 125,
+    "kilobyte": 1000 
+}
+// Conversion out of bytes!
+data_out_units = {
+    "bit": 8,
+    "byte": 1,
+    "kilobit": 0.000125,
+    "kilobyte":  0.001
+}
+function updateData() {
+    inputUnit = document.querySelector("#data_in_unit").value
+    outputUnit = document.querySelector('#data_out_unit').value
+    inputValue = new Number (document.querySelector('#data_in').value)
+    output = document.querySelector('#data_out')
+    output.value = inputValue * data_in_units[inputUnit] * data_out_units[outputUnit]
+}
