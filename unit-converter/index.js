@@ -23,10 +23,35 @@ function updateLength() {
     outputLength.value = outValue
     
 }
-function updateTemperatire() {
+function updateTemperature() {
     inputUnit = document.querySelector("#temp_in_unit").value
     outputUnit = document.querySelector('#temp_out_unit').value
-    inputValue = document.querySelector('#temp_in').value
+    inputValue = new Number (document.querySelector('#temp_in').value)
     output = document.querySelector('#temp_out')
+    let celciusValue = 0;
+    if (inputUnit == "fahrenheit") {
+        celciusValue = (inputValue - 32) * (5/9) 
+    }
+    if (inputUnit == "celcius") {
+        celciusValue = inputValue
+    }
+    if (inputUnit == "kelvin") {
+        celciusValue = inputValue - 273.15
+    }
+    if (inputUnit == "rankine") {
+        celciusValue = (inputValue - 491.67) * (5/9)
+    }
     
+    if (outputUnit == "fahrenheit") {
+        output.value = (celciusValue * (9/5)) + 32
+    }
+    if (outputUnit == "celcius") {
+        output.value = celciusValue
+    }
+    if (outputUnit == "kelvin") {
+        output.value = celciusValue + 273.15
+    }
+    if (outputUnit == "rankine") {
+        output.value = celciusValue * (9/5) + 491.67
+    }
 }

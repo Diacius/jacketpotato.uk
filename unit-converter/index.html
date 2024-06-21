@@ -49,7 +49,7 @@
                     <label for="temp_in">Input Temperature</label>
                     <input type="number" name="temp_in" id="temp_in" step="0.1">
                     <label for="temp_in_unit">Unit</label>
-                    <select name="temp_in_unit">
+                    <select name="temp_in_unit" id="temp_in_unit">
                         <option value="celcius">Celcius</option>
                         <option value="fahrenheit">Farenheight</option>
                         <option value="kelvin">Kelvin</option>
@@ -58,16 +58,16 @@
                 </div>
                 <div>
                     <label for="temp_out">Output Temperature</label>
-                    <input type="number" name="temp_out" step="0.1">
+                    <input type="number" name="temp_out" id="temp_out" step="0.1">
                     <label for="temp_out_unit">Unit</label>
-                    <select name="temp_out_unit">
+                    <select name="temp_out_unit" id="temp_out_unit">
                         <option value="celcius">Celcius</option>
                         <option value="fahrenheit">Farenheight</option>
                         <option value="kelvin">Kelvin</option>
                         <option value="rankine">Rankine</option>
                     </select>
                 </div>
-                <div><button onclick="updateTemperature()">Calculate Length</button></div>
+                <div><button onclick="updateTemperature()">Calculate Temperature</button></div>
             </div>
             <script src="ticketcalc.js"></script>
     </main>
