@@ -17,14 +17,17 @@
         <h1 id="title">HackClub Arcade Ticket Calculator</h1>
         <div class="content">
             <noscript>Just to let you know, you have javascript disabled. That breaks this page and it may affect other websites :)</noscript>
-            <div>
+            <div id="length-converter">
                 <h2>Length Converter</h2>
                 <div>
                     <label for="length_in">Input Length</label>
                     <input type="number" name="length_in" id="length_in" step="0.001">
                     <label for="length_in_unit">Unit</label>
                     <select name="length_in_unit" id="length_in_unit">
+                        <option value="metre">Metre</option>
                         <option value="inch">Inch</option>
+                        <option value="foot">Foot</option>
+                        <option value="yard">Yard</option>
                     </select>
                 </div>
                 <div>
@@ -33,10 +36,39 @@
                     <label for="length_out_unit">Unit</label>
                     <select name="length_out_unit" id="length_out_unit">
                         <option value="metre">Metre</option>
+                        <option value="inch">Inch</option>
+                        <option value="foot">Foot</option>
+                        <option value="yard">Yard</option>
                     </select>
                 </div>
+                <div><button onclick="updateLength()">Calculate Length</button></div>
             </div>
-            <div><button onclick="updateLength()">Calculate</button></div>
+            <div id="temperature-converter">
+                <h2>Temperature Converter</h2>
+                <div>
+                    <label for="temp_in">Input Temperature</label>
+                    <input type="number" name="temp_in" id="temp_in" step="0.1">
+                    <label for="temp_in_unit">Unit</label>
+                    <select name="temp_in_unit">
+                        <option value="celcius">Celcius</option>
+                        <option value="fahrenheit">Farenheight</option>
+                        <option value="kelvin">Kelvin</option>
+                        <option value="rankine">Rankine</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="temp_out">Output Temperature</label>
+                    <input type="number" name="temp_out" step="0.1">
+                    <label for="temp_out_unit">Unit</label>
+                    <select name="temp_out_unit">
+                        <option value="celcius">Celcius</option>
+                        <option value="fahrenheit">Farenheight</option>
+                        <option value="kelvin">Kelvin</option>
+                        <option value="rankine">Rankine</option>
+                    </select>
+                </div>
+                <div><button onclick="updateTemperature()">Calculate Length</button></div>
+            </div>
             <script src="ticketcalc.js"></script>
     </main>
     <script src="index.js"></script>
