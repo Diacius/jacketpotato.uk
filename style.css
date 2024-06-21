@@ -29,6 +29,9 @@
   p {
     margin: 1rem 0;
   }
+  div {
+    margin: 1rem 0rem;
+  }
   body {
     font-family: "Nunito", "Nunito Sans", "Inter", system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background: #5001C7;
@@ -68,7 +71,7 @@
   }
   #title {
       color: #5001C7;
-      font-size: 5rem;
+      font-size: 4rem;
       margin: 0.25em 0;
       text-align: center;
   }
