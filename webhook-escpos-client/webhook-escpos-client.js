@@ -78,21 +78,35 @@ async function send() {
     if (formData.get("img") instanceof(File)) {
         img = formData.get("img");
         imgData = await img.arrayBuffer();
-        console.log(base64ArrayBuffer(imgData));
+        if (imgData.byteLength !== 0) {
+            imgDataB64 = base64ArrayBuffer(imgData)
+            console.log(imgDataB64);}
+
     }
+    var arrayBuf = await formData.get("img").arrayBuffer()
+    if (arrayBuf.byteLength !== 0) {
     var data = {
         "multipart": true,
         "api_version": 1,
         "parts": ["text1", "image1"],
-        "image1": {"type": "image", "imagedata": imgData},
+        "image1": {"type": "image", "imagedata": imgDataB64},
         "text1": {"type": "text", "formatting": true, "text": "This text is formatted", "underlined": underlined, "inverted": inverted}
     };
+    }
+    else {
+        var data = {
+            "multipart": true,
+            "api_version": 1,
+            "parts": ["text1"],
+            "text1": {"type": "text", "formatting": true, "text": "This text is formatted", "underlined": underlined, "inverted": inverted}
+        };
+    }
     console.log(url);
     console.log(data);
     //Actually send
     xhr.open("POST", url, true)
     xhr.setRequestHeader("Content-Type", "application/json")
-    xhr.send(data);
+    xhr.send(JSON.stringify(data));
 }
 form.addEventListener("submit", (event) => {
     // prevent a normal form submit and calculate the tickets needed
