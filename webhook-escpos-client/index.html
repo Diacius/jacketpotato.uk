@@ -35,6 +35,23 @@
                     <label for="img">Image Content:</label>
                     <input type="file" name="img" id="img">
                 </div>
+                <div>
+                    <label for="barcode">Barcode Content:</label>
+                    <input type="text" name="barcode" id="barcode">
+                    <label for="barcode_type">Barcode Type:</label>
+                    <select name="barcode_type" id="barcode_type">
+                        <option value="UPC-A">UPC-A</option>
+                        <option value="UPC-E">UPC-E</option>
+                        <option value="EAN-13">EAN-13</option>
+                        <option value="EAN-8">EAN-8</option>
+                        <option value="Code 39">Code 39</option>
+                        <option value="Int2 of 5">Int2 of 5</option>
+                        <option value="Code 128A">Code 128A</option>
+                        <option value="Code 128B">Code 128B</option>
+                        <option value="Code 128C">Code 128C</option>
+                        <option value="Code 93">Code 93</option>
+                    </select>
+                </div>
                 <div><input type="submit" value="Submit" /></div>
             </form>
             <p><a href="/">Go back to the homepage</a></p>

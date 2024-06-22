@@ -58,9 +58,8 @@ function base64ArrayBuffer(arrayBuffer) {
   
       base64 += encodings[a] + encodings[b] + encodings[c] + '='
     }
-    
     return base64
-  }
+}
 var xhr = new XMLHttpRequest();
 const form = document.querySelector("#webhook-escpos-client")
 async function send() {
@@ -83,22 +82,26 @@ async function send() {
             console.log(imgDataB64);}
 
     }
+    if (formData.get("barcode")) {
+        barcode = formData.get("barcode")
+        barcode_type = formData.get("barcode_type")
+    }
     var arrayBuf = await formData.get("img").arrayBuffer()
     if (arrayBuf.byteLength !== 0) {
-    var data = {
-        "multipart": true,
-        "api_version": 1,
-        "parts": ["text1", "image1"],
-        "image1": {"type": "image", "imagedata": imgDataB64},
-        "text1": {"type": "text", "formatting": true, "text": "This text is formatted", "underlined": underlined, "inverted": inverted}
-    };
+        var data = {
+            "multipart": true,
+            "api_version": 1,
+            "parts": ["text1", "image1"],
+            "image1": {"type": "image", "imagedata": imgDataB64},
+            "text1": {"type": "text", "formatting": true, "text": formData.get("text1"), "underlined": underlined, "inverted": inverted}
+        };
     }
     else {
         var data = {
             "multipart": true,
             "api_version": 1,
             "parts": ["text1"],
-            "text1": {"type": "text", "formatting": true, "text": "This text is formatted", "underlined": underlined, "inverted": inverted}
+            "text1": {"type": "text", "formatting": true, "text": formData.get("text1"), "underlined": underlined, "inverted": inverted}
         };
     }
     console.log(url);
