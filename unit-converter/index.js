@@ -60,14 +60,24 @@ data_in_units = {
     "bit": 0.125,
     "byte": 1,
     "kilobit": 125,
-    "kilobyte": 1000 
+    "kilobyte": 1000, 
+    "kibibyte": 1024,
+    "megabyte": 1000000,
+    "mebibyte": 1048576,
+    "gigabyte": 1000000000,
+    "gibibyte": 1073741824
 }
 // Conversion out of bytes!
 data_out_units = {
     "bit": 8,
     "byte": 1,
-    "kilobit": 0.000125,
-    "kilobyte":  0.001
+    "kilobit":  0.000125,
+    "kilobyte": 0.001,
+    "kibibyte": 0.000977,
+    "megabyte": 0.000001,
+    "mebibyte": 0.000000953674316,
+    "gigabyte": 0.000000001,
+    "gibibyte": 0.000000000931323
 }
 function updateData() {
     inputUnit = document.querySelector("#data_in_unit").value

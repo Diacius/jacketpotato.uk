@@ -71,6 +71,9 @@
             </div>
             <div id="data-converter">
                 <h2>Data Converter</h2>
+                <h3>What is a kibibyte?</h3>
+                <p>Kilo,Mega,and Giga are metric prefixes. This means that they work in factors in ten.<br>However, computers work in binary, meaning they need units in multiples of 8
+                This is why the units kibibyte, mebibyte, and gibibyte exist. 1KiB = 1024 Bytes, instead of 1000 Bytes</p>
                 <div>
                     <label for="data_in">Amount of data</label>
                     <input type="number" name="data_in" id="data_in" step="0.1">
@@ -80,6 +83,11 @@
                         <option value="byte">Byte</option>
                         <option value="kilobit">Kilobit</option>
                         <option value="kilobyte">Kilobyte</option>
+                        <option value="kibibyte">Kibibyte</option>
+                        <option value="megabyte">Megabyte</option>
+                        <option value="mebibyte">Mebibyte</option>
+                        <option value="gigabyte">Gigabyte</option>
+                        <option value="gibibyte">Gibibyte</option>
                     </select>
                 </div>
                 <div>
@@ -91,6 +99,11 @@
                         <option value="byte">Byte</option>
                         <option value="kilobit">Kilobit</option>
                         <option value="kilobyte">Kilobyte</option>
+                        <option value="kibibyte">Kibibyte</option>
+                        <option value="megabyte">Megabyte</option>
+                        <option value="mebibyte">Mebibyte</option>
+                        <option value="gigabyte">Gigabyte</option>
+                        <option value="gibibyte">Gibibyte</option>
                     </select>
                 </div>
                 <div><button onclick="updateData()">Calculate Data</button></div>
