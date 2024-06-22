@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A guide to printing on Linux">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <!-- LOAD FONT<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&display=swap"> -->
+    <link id="csslinker" rel="stylesheet" href="/style.css">
+
+    <title>How to print on linux without losing your sanity</title>
+    <style>
+        
+        #link-grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        #title {
+            color: #5001C7;
+            font-size: 3rem;
+        }
+        .long-links {
+            max-width: 100vw;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1 id="title">How to print on linux without losing your sanity</h1>
+            <p>Printing on linux can be a little confusing, this guide aims to walk through getting printing working easily.</p>
+            <p>Printing on Linux is mainly done with <a href="https://openprinting.github.io/cups/">CUPS</a>, which provides the backend on many Linux distributions, although many distros add a frontend.</p>
+            <p>If the frontent provides a poor interface, often the CUPS web interface can be used to get a better idea of what is avaialbel to use the printer, on port 631.</p>
+            <h2>Method 1: IPP</h2>
+            <p>The easisest way to get printing working on Linux right now is IPP, which is a standardised protocol designed to allow all printers to work in the same way. Apple brands its extention of IPP as AirPrint, so almost all printers that <a href="">support AirPrint</a> will work with Linux</p>
+            <p>When adding a printer, using IPP will often provide the best results</p>
+            <h2>Method 2: Drivers</h2>
+            <p>Sometimes, either the printer doesn't work properly with IPP, or IPP does not support all of the printers features</p>
+            <p>There is project called <a href="https://gimp-print.sourceforge.io/p_Supported_Printers.php">Gutenprint which offers drivers for many printers</a> and in some cases will work with the printer better than IPP</p>
+            <p>Sometimes, the manafacturer provides their own drivers to work with their printers, these can often be a pain to install, but can work better than the other options as a last resort.</p>
+
+            <div>
+                <p>Last Updated: 2024-06-22 15:00<br/><a href="/">Home</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="/js/designify.js"></script>
+    <script>
+        window.onload = (event) => {
+            designifyCheck();
+        };
+    </script>
+</body>
+</html>
