@@ -60,9 +60,13 @@ function base64ArrayBuffer(arrayBuffer) {
     }
     return base64
 }
-var xhr = new XMLHttpRequest();
 const form = document.querySelector("#webhook-escpos-client")
 async function send() {
+    var data = {
+        "multipart": true,
+        "api_version": 1,
+        "parts": [],
+    };
     let formData = new FormData(form);
     var url = formData.get("url");
     var underlined = false;
@@ -82,34 +86,37 @@ async function send() {
             console.log(imgDataB64);}
 
     }
-    if (formData.get("barcode")) {
+    if (formData.get("barcode") !== "") {
         barcode = formData.get("barcode")
         barcode_type = formData.get("barcode_type")
+        data["parts"].push("barcode1")
+        data["barcode1"] = {"type": "barcode", "barcode-type": barcode_type, "code": barcode}
     }
-    var arrayBuf = await formData.get("img").arrayBuffer()
-    if (arrayBuf.byteLength !== 0) {
-        var data = {
-            "multipart": true,
-            "api_version": 1,
-            "parts": ["text1", "image1"],
-            "image1": {"type": "image", "imagedata": imgDataB64},
-            "text1": {"type": "text", "formatting": true, "text": formData.get("text1"), "underlined": underlined, "inverted": inverted}
-        };
+    var imgBuffer = await formData.get("img").arrayBuffer()
+    // Create data object based on which fields have been filled in
+    if (imgBuffer.byteLength !== 0) {
+        data["parts"].push("img1")
+        var imgDataB64 = base64ArrayBuffer(imgBuffer);
+        data["img1"] = {"type": "image", "imagedata": imgDataB64}
     }
-    else {
-        var data = {
-            "multipart": true,
-            "api_version": 1,
-            "parts": ["text1"],
-            "text1": {"type": "text", "formatting": true, "text": formData.get("text1"), "underlined": underlined, "inverted": inverted}
-        };
+    if (formData.get("text1") !== "") {
+        data["parts"].push("text1")
+        data["text1"] = {"type": "text", "formatting": true, "text": formData.get("text1"), "underlined": underlined, "inverted": inverted}
     }
     console.log(url);
     console.log(data);
     //Actually send
+    var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(JSON.stringify(data));
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4) {
+            outputElement = document.querySelector("#output")
+            outputElement.value = xhr.response;
+        }
+      };
+    xhr.close();
 }
 form.addEventListener("submit", (event) => {
     // prevent a normal form submit and calculate the tickets needed
