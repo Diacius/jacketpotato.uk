@@ -16,7 +16,7 @@
     
     <script>
         circles = [];
-        colours = [[0,255,0]]
+        colours = [[255,0,0],[0,255,0],[0,0,255],[255,255,0],[0,255,255],[255,0,255]]
         firstClick = true;
         window.penDown = true;
         function setup() {
@@ -32,10 +32,10 @@
             noStroke();
             let cnv = document.getElementById("defaultCanvas0")
             currColour = cnv.getAttribute("penColour")
-            fill(colours[currColour][0],colours[currColour][1],colours[currColour][2]);
+            currentColourObject = colours[currColour]
             isPenDown = cnv.getAttribute("penDown")
             if (isPenDown == "true") {
-                circles.push(new dot(mouseX, mouseY, 5));
+                circles.push(new dot(mouseX, mouseY, 5, currentColourObject[0], currentColourObject[1], currentColourObject[2]));
             }
             circles.forEach(element => {
                 element.draw()
@@ -62,17 +62,25 @@
             // pick a new colour here
             let cnv = document.getElementById("defaultCanvas0")
             currentColour = Number(cnv.getAttribute("penColour"))
-            if (currentColour) {}
-            currentColour++;
+            if (currentColour == colours.length - 1) {
+                currentColour = 0;
+            }
+            else {
+                currentColour++;
+            }
             cnv.setAttribute("penColour", currentColour)
         }
         class dot {
-            constructor(x,y,diameter) {
+            constructor(x,y,diameter,R,G,B) {
                 this.x = x
                 this.y = y
                 this.diameter = diameter
+                this.R = R
+                this.G = G
+                this.B = B
             }
             draw() {
+                fill(this.R, this.G, this.B)
                 circle(this.x,this.y,10)
             }
         }
