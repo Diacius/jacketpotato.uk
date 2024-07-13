@@ -15,18 +15,65 @@
 <body>
     
     <script>
-        firstClick = false;
+        circles = [];
+        colours = [[0,255,0]]
+        firstClick = true;
+        window.penDown = true;
         function setup() {
-            createCanvas(500, 500)
+            let cnv = createCanvas(windowWidth-10, windowHeight-10);
+            cnv.doubleClicked(changePen);
+            let cnv2 = document.getElementById("defaultCanvas0")
+            isPenDown = cnv2.setAttribute("penDown", "true")
+            currColour = cnv2.setAttribute("penColour", 0)
+            background(0,24,24);
         }
         function draw() {
+            // create a new dot where the cursor
+            noStroke();
+            let cnv = document.getElementById("defaultCanvas0")
+            currColour = cnv.getAttribute("penColour")
+            fill(colours[currColour][0],colours[currColour][1],colours[currColour][2]);
+            isPenDown = cnv.getAttribute("penDown")
+            if (isPenDown == "true") {
+                circles.push(new dot(mouseX, mouseY, 5));
+            }
+            circles.forEach(element => {
+                element.draw()
+            });
 
         }
+        function changePen() {
+            console.log("attempting change")
+            let cnv = document.getElementById("defaultCanvas0")
+            isPenDown = cnv.getAttribute("penDown")
+            if (isPenDown == "true") {
+                cnv.setAttribute("penDown", "false")
+            }
+            if (isPenDown == "false") {
+                cnv.setAttribute("penDown", "true")
+            }
+        }
         function mousePressed() {
-            if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height && !firstClick) {
-                firstClick = true;
+            /*if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height && firstClick) {
+                firstClick = false;
                 let fs = fullscreen();
                 fullscreen(!fs);
+            }*/
+            // pick a new colour here
+            let cnv = document.getElementById("defaultCanvas0")
+            currentColour = Number(cnv.getAttribute("penColour"))
+            if (currentColour) {}
+            currentColour++;
+            cnv.setAttribute("penColour", currentColour)
+        }
+        class dot {
+            constructor(x,y,diameter) {
+                this.x = x
+                this.y = y
+                this.diameter = diameter
+            }
+            draw() {
+                circle(this.x,this.y,10)
             }
         }
     </script>
