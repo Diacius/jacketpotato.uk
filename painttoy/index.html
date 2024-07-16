@@ -15,19 +15,22 @@
 <body>
     
     <script>
+        function rand() {
+            return Math.random()*12
+        }
         circles = [];
-        colours = [[255,0,0],[0,255,0],[0,0,255],[255,255,0],[0,255,255],[255,0,255]]
+        colours = [[255,9,0],[255,110,0],[255,216,0],[156,255,0],[0,214,255],[17,0,255],[124,0,255]] 
         firstClick = true;
         window.penDown = true;
         function setup() {
-            let cnv = createCanvas(windowWidth-10, windowHeight-10);
+            let cnv = createCanvas(windowWidth-5, windowHeight-5);
             cnv.doubleClicked(changePen);
             let cnv2 = document.getElementById("defaultCanvas0")
             isPenDown = cnv2.setAttribute("penDown", "true")
             currColour = cnv2.setAttribute("penColour", 0)
             background(0,24,24);
         }
-        function draw() {
+        function draw(clear) {
             // create a new dot where the cursor
             noStroke();
             let cnv = document.getElementById("defaultCanvas0")
@@ -35,12 +38,22 @@
             currentColourObject = colours[currColour]
             isPenDown = cnv.getAttribute("penDown")
             if (isPenDown == "true") {
-                circles.push(new dot(mouseX, mouseY, 5, currentColourObject[0], currentColourObject[1], currentColourObject[2]));
+                circles.push(new dot(mouseX, mouseY, rand(), currentColourObject[0], currentColourObject[1], currentColourObject[2]));
             }
             circles.forEach(element => {
                 element.draw()
             });
-
+            if (clear === true) {
+                circles = []
+                console.log("clear atttamterpo")
+            }
+        }
+        function keyPressed(event) {
+            if (key == 'c') {
+                circles.splice(0,circles.length)
+                console.log(event);
+                draw(true)
+            }
         }
         function changePen() {
             console.log("attempting change")
@@ -81,7 +94,7 @@
             }
             draw() {
                 fill(this.R, this.G, this.B)
-                circle(this.x,this.y,10)
+                circle(this.x,this.y,this.diameter)
             }
         }
     </script>
