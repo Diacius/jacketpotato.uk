@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JacketPotato's Website - Home">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="/style.css">
+    <title>JacketPotato's Website</title>
+    <style>
+        body {
+            background-image: url("lizbg.png");
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="title">How many Liz Trusses have you been alive?</h1>
+        <div class="content">
+            <noscript>Just to let you know, you have javascript disabled. That breaks this page and it may affect other websites :)</noscript>
+            <div id="length-converter">
+                <img src="elizabethtruss.png" alt="" width="256px">
+                <div>
+                    (Liz Truss was Prime Minister for 49 days)
+                    I have been alive for <input type="number" id="years">years
+                    <button onclick="trussonomics()">Calcuate</button>
+                    You have been alive for <span id="output"></span> Liz Trusses
+                </div>
+            </div>
+            <a href="/">Go home</a>
+            <script src="truss.js"></script>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
