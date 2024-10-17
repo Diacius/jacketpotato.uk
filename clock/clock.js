@@ -1,4 +1,4 @@
-let months = ['January', 'February', 'March', 'April', 'June','July', 'August']
+let months = ['January', 'February', 'March', 'April', 'June','July', 'August', 'September', 'October', 'December']
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' , 'Saturday', 'Sunday']
 async function update() {
     let d = new Date();
