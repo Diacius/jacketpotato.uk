@@ -60,6 +60,8 @@ function base64ArrayBuffer(arrayBuffer) {
     }
     return base64
 }
+
+// Code below written by me.
 const form = document.querySelector("#webhook-escpos-client")
 async function send() {
     var data = {

@@ -16,7 +16,8 @@ async function typeGreeting(letters) {
     workingElement.innerHTML = '';
     var i = 0;
     /*while (i < letters.length) {
-        /*if ((Math.random() * 10) < 1) {
+        workingElement.innerHTML = workingElement.innerHTML + 
+        if ((Math.random() * 10) < 1) {
             randomLetter = alphabet[Math.abs(Math.round(Math.random()*alphabet.length))];
             original = workingElement.innerHTML;
             workingElement.innerHTML = workingElement.innerHTML + randomLetter;
@@ -24,14 +25,14 @@ async function typeGreeting(letters) {
             workingElement.innerHTML = original;
             
         }*/
-        workingElement.innerHTML = letters.join('');
-        await delay(Math.random() * 300);
+    workingElement.innerHTML = letters.join('');
+    await delay(Math.random() * 300);
 }
 async function continuouslyType(){
     var i = 0;
     while (i < 50) {
         await typeGreeting(genGreeting());
-        await delay(1000);
+        await delay(3000);
         i++;
     }
     
