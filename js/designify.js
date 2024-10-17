@@ -1,8 +1,6 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-function displayDesignifyButton() {
-}
 function turnOffDesignify() {
 
     document.querySelector('#csslinker').outerHTML = '<link id="csslinker" rel="stylesheet" href="/style.css">';
